@@ -37,86 +37,66 @@
 			color: #333;
 			width: 650px;
 		}
-		#grid{
-			grid-template-columns: auto minmax(min-content, 1fr);
-			grid-template-rows: auto minmax(min-content, 1fr) auto
+		.table{
+			width: auto;
 		}
-		#column1{
-			grid-column: 1;
+		.row{
+			position: relative;
+			height: auto;
+			width: auto;
+			clear: both;
 		}
-		#column2{
-			grid-column: 2;
-		}
-		#column3{
-			grid-column: 2;
-		}
-		#row1{
-			grid-row: 1;
-		}
-		#row2{
-			grid-row: 2;
-		}
-		#row3{
-			grid-row: 3;
+		.col{
+			margin-bottom: 10px;
+			float: left;
+			width: 150px;
+			margin-right: 20px;
 		}
 	</style>
 </head>
 <body>
 	<h1>Form 1</h1>
 	<form method="get" action="myResult.php">
-		<div id="grid">
-			<div class="label" id="column1 row1">nama</div>
-			<div id="column1 row2">:</div>
-			<div id="column1 row3"><input type="text" name="nama" class="input-text"></div>
-		</div>
-		<!--
-		<table border="0">
-			<tr>
-				<td class="label">nama</td>
-				<td>:</td>
-				<td><input type="text" name="nama" class="input-text"></td>
-			</tr>
-			<tr>
-				<td class="label">gender</td>
-				<td>:</td>
-				<td><input type="radio" name="gender" value="pria">Pria<input type="radio" name="gender" value="wanita">Wanita</td>
-			</tr>
-			<tr>
-				<td class="label">Pekerjaan</td>
-				<td>:</td>
-				<td>
+		<div class="table">
+			<div class="row">
+				<div class="col label">nama</div>
+				<div class="col"><input type="text" name="nama" class="input-text"></div>
+			</div>
+			<div class="row">
+				<div class="label col">gender</div>
+				<div class="col"><input type="radio" name="gender" value="pria">Pria<input type="radio" name="gender" value="wanita">Wanita</div>	
+			</div>
+			<div class="row">
+				<div class="col label">pekerjaan</div>
+				<div class="col">
 					<select name="pekerjaan" class="input-text">
 						<option value="dosen">dosen</option>
 						<option value="mahasiswa">mahasiswa</option>
 					</select>
-				</td>
-			</tr>
-			<tr>
-				<td class="top label">kelompok keahlian</td>
-				<td class="top">:</td>
-				<td>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col label">keolompok keahlian</div>
+				<div class="col">
 					<input type="checkbox" name="keahlian[]" value="ICM">ICM<br>
 					<input type="checkbox" name="keahlian[]" value="SIDE">SIDE<br>
 					<input type="checkbox" name="keahlian[]" value="TELE">TELE<br>
-				</td>
-			</tr>
-			<tr>
-				<td class="top label">Komentar</td>
-				<td class="top">:</td>
-				<td>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col label">komentar</div>
+				<div class="col">
 					<textarea name="komentar" style="height:80px;" class="input-text"></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="color:white;">a</div>
+				<div class="col">
 					<button class="button" type="submit">kirim</button>
 					<button class="button" type="reset">reset</button>
-				</td>
-			</tr>
-		</table>
-		-->
+				</div>
+			</div>
+		</div>
 	</form>
 </body>
 </html>
