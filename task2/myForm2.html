@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form 2 | Get</title>
+	<style type="text/css">
+		.top{
+			vertical-align: text-top;
+		}
+		.input-text{
+			border-radius: 4px;
+			width: 350px;
+			height: 20px;
+		}
+		td{
+			padding-bottom: 15px;
+			text-align: left;
+			vertical-align: center;
+		}
+		.label{
+			text-align: right;
+			font-family: monospace;
+			font-size: 17px;
+		}
+		.button{
+			width: 72px;
+			height: 38px;
+			text-align: center;
+			font-family:  Helvetica;
+			font-size: 14px;
+			background-color: #66CCFF;
+			border-radius: 8px;
+			box-shadow: none;
+			border-style: none;
+		}
+		h1{
+			border-bottom: 2px solid #333;
+			color: #333;
+			width: 650px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Form 2</h1>
+	<form method="get" action="myResult.php">
+		<table border="0">
+			<tr>
+				<td class="label">nama</td>
+				<td>:</td>
+				<td><input type="text" name="nama" class="input-text"></td>
+			</tr>
+			<tr>
+				<td class="label">gender</td>
+				<td>:</td>
+				<td><input type="radio" name="gender" value="pria">Pria<input type="radio" name="gender" value="wanita">Wanita</td>
+			</tr>
+			<tr>
+				<td class="label">Pekerjaan</td>
+				<td>:</td>
+				<td>
+					<select name="pekerjaan" class="input-text">
+						<option value="dosen">dosen</option>
+						<option value="mahasiswa">mahasiswa</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="top label">kelompok keahlian</td>
+				<td class="top">:</td>
+				<td>
+					<input type="checkbox" name="keahlian[]" value="ICM">ICM<br>
+					<input type="checkbox" name="keahlian[]" value="SIDE">SIDE<br>
+					<input type="checkbox" name="keahlian[]" value="TELE">TELE<br>
+				</td>
+			</tr>
+			<tr>
+				<td class="top label">Komentar</td>
+				<td class="top">:</td>
+				<td>
+					<textarea name="komentar" style="height:80px;" class="input-text"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>			
+					<button class="button" type="submit">kirim</button>
+					<button class="button" type="reset">reset</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
